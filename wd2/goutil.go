@@ -150,7 +150,7 @@ func printStruct(data [][][][]string) {
 										fmt.Printf("\n\\begin{routeResponse}{application/json}")
 						for whoahitem, _ := range data[whoah][whoahtype] {
 
-										fmt.Printf("\n\\routeResponseItem")
+										fmt.Printf("\n\\begin{routeResponseItem}")
 
 							for whoahfield := range data[whoah][whoahtype][whoahitem] {
 								if whoahfield < 2 {
@@ -167,7 +167,7 @@ func printStruct(data [][][][]string) {
 				
 
 				}	
-
+				fmt.Printf("\n\\end{apiRoute}")
 		}
 
 
