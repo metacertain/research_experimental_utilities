@@ -33,20 +33,24 @@ func main() {
 
 	fmt.Println("\nDiversity based gain probabilities for loss of T")
 
-	var BDBG = make([][]float64, G)
-	var Suite = make([]int64, G)
+	var BDBG = make([][]float64, (G + 1))
+	var Suite = make([]int64, (G + 1))
 
 	fmt.Println("\nSuitable candidates by Proximity Gain G\n")
 	for j=0; j < G ; j++ {
 		Suite[j] = int64(math.Pow(2, float64( G-1-j )))
 		fmt.Printf("%v \\\\\\|||/// %v \n", j+1, Suite[j])
 	}
+
+	Suite[G] = Suite[G-1] / 2
 	
-	for j=0; j < G; j++ {
+	for j=0; j <= G; j++ {
 		if debug {
 			fmt.Printf("\n\n This is row %v calc debug \n\n", j)
 		}
+
 		BDBG[j] = make([]float64, B + 1)
+		
 		for i=0; i <= B; i++ {
 				
 				// This didnt work sane above some values
@@ -56,8 +60,11 @@ func main() {
 					fmt.Printf("\n\nBEGINNING calculation for cell j: %v i: %v \n", j, i)
 					fmt.Printf("\n S:%v/T:%v &  T!/(T-S)! :  %v  &  B!/(B-S)! (1/~ needed): %v  \n", Suite[j], i, intvFctnShw(i, Suite[j]), intvFctnShw( B, Suite[j] ) )
 				}
-				BDBG[j][i] = 1 - ( intvFctnShw( i, Suite[j] ) / intvFctnShw( B, Suite[j] ) )
+		
+				if (i < G) {
+					BDBG[j][i] = 1 - ( intvFctnShw( i, Suite[j] ) / intvFctnShw( B, Suite[j] ) ) - (1 - ( ( intvFctnShw( i, Suite[j+1] ) / intvFctnShw( B, Suite[j+1] ) ) ) )
 				// This is only safe because Suite[j] is <= B, otherwise would deterministically become division by zero			
+				}
 		}
 	}
 
