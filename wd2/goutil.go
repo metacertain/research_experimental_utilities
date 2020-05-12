@@ -167,11 +167,12 @@ func printStruct(data [][][][]string) {
 				
 
 				}	
-				fmt.Printf("\n\\end{apiRoute}")
+		
 		}
+				fmt.Printf("\n\\end{apiRoute}")
 
 
-}
+	}
 
 
 
