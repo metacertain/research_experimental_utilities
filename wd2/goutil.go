@@ -119,7 +119,7 @@ func main() {
 { { {"GET", "/chunk/\\{reference\\}", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
 { { {"POST", "/chunk/(?span=\\{span\\})", 								" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
 { { {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})", 							" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"POST", "/soc/\\{owner}/\\{id\\}?span=\\{span\\}&encrypt=\\{encrypt\\}", 		" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}&encrypt=\\{encrypt\\}", 		" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
 { { {"POST", "/file/",				 								" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
 { { {"GET", "/file/\\{reference\\}", 										" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
 { { {"PUT", "/file/ fromdataasbody", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
