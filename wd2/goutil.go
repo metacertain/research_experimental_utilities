@@ -18,7 +18,7 @@ func main() {
 	fmt.Println("Hi")
 
 	var (
-		E = 3
+		E = 22
 		S [][]int
 		R []int
 	)
@@ -31,7 +31,8 @@ func main() {
 		S[i][0] = 2					// No. d'parametres
 		S[i][1] = R[i]				// No. d'responses
 	}
-	
+
+
 //
 //
 //
@@ -67,7 +68,10 @@ func main() {
 		}
 	}
 
-	
+
+
+
+	//Suite := make([][][][]string, E)
 	Endpoints := make([][][][]string, E)
 	for j:=0; j < E ; j++ {
 		Endpoints[j] = make ([][][]string, 3)
@@ -104,10 +108,36 @@ func main() {
 
 	}
 
+	Lol := [][][][]string{
+{ { {"POST", "/bzz:/", 												" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"PUT", "/bzz:/", 												" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"POST", "/tag", 													" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"GET", "/tag", 													" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"GET", "/tag/\\{id\\}", 												" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"GET", "/stamp", 												" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"GET", "/pin", 													" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"GET", "/chunk/\\{reference\\}", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"POST", "/chunk/(?span=\\{span\\})", 								" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})", 							" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"POST", "/soc/\\{owner}/\\{id\\}?span=\\{span\\}&encrypt=\\{encrypt\\}", 		" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"POST", "/file/",				 								" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"GET", "/file/\\{reference\\}", 										" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"PUT", "/file/ fromdataasbody", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"GET", "/manifest/\\{node:reference\\}/\\{path\\}", 					" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"DELETE", "/manifest/\\{node\\}/\\{path\\} ", 							" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"PUT", "/manifest/\\{old\\} ", 										" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"POST", "/access/\\{address\\} ", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"GET", "/access/\\{address\\} ", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"PUT", "/access/\\{root\\}/ ", 										" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"DELETE", "/access/\\{root\\} ", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
+{ { {"POST", "/pss/\\{topic\\} ", 										" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } },
+}
+
+
 	
-	fmt.Println(Endpoints)
+	fmt.Println(Lol)
 	fmt.Println(S)
-	printStruct( Endpoints );
+	printStruct( Lol );
 }
 
 // End of ma  i n
@@ -157,7 +187,7 @@ func printStruct(data [][][][]string) {
 										fmt.Printf("{%v}", data[whoah][whoahtype][whoahitem][whoahfield] )
 								}
 								if whoahfield == 2 {
-										fmt.Printf("\n\\begin{routeResponseItemBody}\n %v \n\\end{routeResponseItemBody} }", data[whoah][whoahtype][whoahitem][whoahfield] )	
+										fmt.Printf("\n\\begin{routeResponseItemBody}\n %v \n\\end{routeResponseItemBody}", data[whoah][whoahtype][whoahitem][whoahfield] )	
 								}
 
 							}
