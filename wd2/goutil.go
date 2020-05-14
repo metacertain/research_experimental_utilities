@@ -109,28 +109,28 @@ func main() {
 	}
 
 	Lol := [][][][]string{
-{ { {"POST", "/bzz:/", 												" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"PUT", "/bzz:/", 												" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"POST", "/tag", 													" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"GET", "/tag", 													" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"GET", "/tag/\\{id\\}", 												" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"GET", "/stamp", 												" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"GET", "/pin", 													" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"GET", "/chunk/\\{reference\\}", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"POST", "/chunk/(?span=\\{span\\})", 								" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})", 							" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}&encrypt=\\{encrypt\\}", 		" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"POST", "/file/",				 								" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"GET", "/file/\\{reference\\}", 										" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"PUT", "/file/ fromdataasbody", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"GET", "/manifest/\\{node:reference\\}/\\{path\\}", 					" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"DELETE", "/manifest/\\{node\\}/\\{path\\} ", 							" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"PUT", "/manifest/\\{old\\} ", 										" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"POST", "/access/\\{address\\} ", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"GET", "/access/\\{address\\} ", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"PUT", "/access/\\{root\\}/ ", 										" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"DELETE", "/access/\\{root\\} ", 									" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } }, 
-{ { {"POST", "/pss/\\{topic\\} ", 										" Path description"} }, { {"id", "identification"}, {"other", "other parameter"} }, { {"200", "ok", "lore200"} } },
+{ { {"POST", "/bzz:/", 																		" Path description"} } , { {"file/collection", "as request body"} }, { { "204", "No Content", 							"" } } }, 
+{ { {"PUT", "/bzz:/", 																		" Path description"} } , { {"file/collection", "as request body"} }, { { "204", "No Content", 							"" } } }, 
+{ { {"POST", "/tag", 																			" Path description"} } , { {"other", "other parameter"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"GET", "/tag", 																			" Path description"} } , { {"other", "other parameter"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"GET", "/tag/\\{id\\}", 																	" Path description"} } , { {"id", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"GET", "/stamp", 																		" Path description"} } , { {"other", "other parameter"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"GET", "/pin", 																			" Path description"} } , { {"other", "other parameter"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"GET", "/chunk/\\{reference\\}", 														" Path description"} } , { {"reference", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"POST", "/chunk/(?span=\\{span\\})", 													" Path description"} } , { {"span", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})", 										" Path description"} } , { {"owner", "string"}, {"id", "string"}, {"key", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}\\&encrypt=\\{encrypt\\}", 			" Path description"} } , { {"owner", "string"}, {"id", "string"}, {"span", "string"}, {"encrypt", "hex string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"POST", "/file/",				 														" Path description"} } , { {"other", "other parameter"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"GET", "/file/\\{reference\\}", 															" Path description"} } , { {"reference", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"PUT", "/file/ fromdataasbody", 															" Path description"} } , { {"file/collection", "as request body"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"GET", "/manifest/\\{node:reference\\}/\\{path\\}", 										" Path description"} } , { {"node reference", "hex string"}, {"path", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"DELETE", "/manifest/\\{node\\}/\\{path\\} ", 											" Path description"} } , { {"node", "string"}, {"path", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"PUT", "/manifest/\\{old\\} ", 															" Path description"} } , { {"old", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"POST", "/access/\\{address\\} ", 														" Path description"} } , { {"address", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"GET", "/access/\\{address\\} ", 														" Path description"} } , { {"address", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"PUT", "/access/\\{root\\}/ ", 															" Path description"} } , { {"root", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"DELETE", "/access/\\{root\\} ", 														" Path description"} } , { {"root", "string"} },  { { "204", "No Content", 							"" } } }, 
+{ { {"POST", "/pss/\\{topic\\} ", 															" Path description"} } , { {"topic", "string"} },  { { "204", "No Content", 							"" } } }, 
 }
 
 
@@ -199,7 +199,7 @@ func printStruct(data [][][][]string) {
 				}	
 		
 		}
-				fmt.Printf("\n\\end{apiRoute}")
+				fmt.Printf("\n\\end{apiRoute}\n\\\\\n\\\\\n")
 
 
 	}
