@@ -6,7 +6,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 var (
@@ -17,31 +16,17 @@ func main() {
 
 	fmt.Println("Hi")
 
-	var (
-		E = 22
-		S [][]int
-		R []int
-	)
-
-	R = make([]int, E)
-	S = make([][]int, E)
-	for i:=0; i < E; i++ {
-		R[i] = 1;					// -> No. d'responses
-		S[i] = make([]int, 2)
-		S[i][0] = 2					// No. d'parametres
-		S[i][1] = R[i]				// No. d'responses
-	}
-
-
 //
 //
 //
 //		1st division = type (0 route 1 param 2 response)
-//		2nd division = items ( 0 1  1 i  2 n )
+//		2nd division = items ( 0 ~ 1   1 ~ i   2 ~ j   3 ~ k   4 ~ n )
 //		3rd division = fields ( 
 //								0 : method, path, lore
 //								1 : name, lore
-//								2 : status code, status text, responseitembody
+//								2 : name, lore
+//								3 : name, lore								
+//								4 : status code, status text, responseitembody
 //								)
 //		
 //
@@ -49,70 +34,23 @@ func main() {
 //																				//
 //																				//
 //		[0][0][0], [0][0][1], [0][0][2]											//
-//			method		path		lore										//	apiroute {}{}{}	<- 3 * 1
+//			method		path		lore										//	apiroute {0}{0}{}	<- 1 * 3
 //																				//
-//		[1][ params ][0], [1][ params ][1]										//	routeparameter{}{} <- i * 2
+//		[1][ params ][0], [1][ params ][1]										//	routeparameter[1]{i}{}  <- i * 2
 //					name			lore										//
 //																				//
-//		[1][ params ][0], [1][ params ][1]										//	headerparameter{}{} <- j * 2
+//		[1][ params ][0], [1][ params ][1]										//	headerparameter[2]{j}{} <- j * 2
 //					name			lore										//
 //																				//
-//		[1][ params ][0], [1][ params ][1]										//	queryparameter{}{} <- k * 2
+//		[1][ params ][0], [1][ params ][1]										//	queryparameter{3}{k} <- k * 2
 //					name			lore										//
 //																				//
-//																				//	routeresponse { < n * 3
+//																				//	routeresponse{4}{n} <- n * 3
 //		[2][ responses ][0], [2][ responses ][1], [2][ responses ][2]			//		routeResponseItem { status code } { status text } { RouteresponseItemBody}
 //					status code			status text			responseitembody	//	
 //																				//	}
 //																				//
 //		
-	fmt.Println("\nEndpoints in spec\n\n")
-
-	for j:=0; j < E; j++ {
-		for i:=0; i < S[j][0]; i++ {
-
-		}
-	}
-
-
-
-
-	//Suite := make([][][][]string, E)
-	Endpoints := make([][][][]string, E)
-	for j:=0; j < E ; j++ {
-		Endpoints[j] = make ([][][]string, 3)
-
-		for k:=0; k < 3; k++ {
-			switch k {
-
-				case 0:
-					Endpoints[j][k] = make([][]string, 1)
-					Endpoints[j][k][0] = make([]string, 3)
-					Endpoints[j][k][0] = []string{"MET", "/path" + strconv.Itoa(j), "Endpoint " + strconv.Itoa(j) + " Description"}
-					fmt.Printf("%v: , %v: , 0: \n", j, k)
-
-				case 1:
-					Endpoints[j][k] = make([][]string, S[j][0] )
-					for l:=0; l < S[j][0]; l++ {
-						Endpoints[j][k][l] = make([]string, 2 )
-						Endpoints[j][k][l] = []string{"Variable " + strconv.Itoa(l) + " name", "Variable " + strconv.Itoa(l) + " Description"}
-						fmt.Printf("%v: , %v: , %v: \n", j, k, l)
-					}
-
-				case 2:
-					Endpoints[j][k] = make([][]string, S[j][1] )
-					for l:=0; l < S[j][1]; l++ {
-						Endpoints[j][k][l] = make([]string, 3 )
-						Endpoints[j][k][l] = []string{"Answer " + strconv.Itoa(l) + " code", "Answer " + strconv.Itoa(l) + " name", "Answer " + strconv.Itoa(l) + " description"}
-						fmt.Printf("%v: , %v: , %v: \n", j, k, l)	
-					}
-				
-
-			}
-
-		}
-
-	}
 
 	Lol := [][][][]string{
 { { {"PUT", "/bzz:/", 																			" Path description"} } , { {"file/collection", "as request body"} 															}	,		{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	},	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
@@ -149,7 +87,6 @@ func main() {
 
 	
 	fmt.Println(Lol)
-	fmt.Println(S)
 	printStruct( Lol );
 }
 
@@ -158,7 +95,7 @@ func main() {
 func printStruct(data [][][][]string) {
 	fmt.Printf("\nVisualizer \n\n")
 
-										fmt.Printf("\n\\UseRawInputEncoding\n")
+											fmt.Printf("\n\\UseRawInputEncoding\n")
 
 	for whoah := range data {
 
@@ -169,25 +106,25 @@ func printStruct(data [][][][]string) {
 					switch whoahtype {
 						case 0:
 											fmt.Printf("\n\n\\begin{apiRoute}{" + 
-											data[whoah][0][0][0] + "}{" + 
-											data[whoah][0][0][1] + "}{" + 
-											data[whoah][0][0][2] + "}\n{\n}\n{ }\n")
+																data[whoah][0][0][0] + "}{" + 
+																data[whoah][0][0][1] + "}{" + 
+																data[whoah][0][0][2] + "}\n{\n}\n{ }\n")
 
 						case 1:
-												fmt.Printf("\n\\begin{routeParameter} ")
-								
-								for whoahitem, _ := range data[whoah][whoahtype] {
+											fmt.Printf("\n\\begin{routeParameter} ")
+							
+							for whoahitem, _ := range data[whoah][whoahtype] {
 
-												fmt.Printf("\n\\routeParamItem")
+											fmt.Printf("\n\\routeParamItem")
 
-									for whoahfield := range data[whoah][whoahtype][whoahitem] {
+								for whoahfield := range data[whoah][whoahtype][whoahitem] {
 
-												fmt.Printf("{%v}", data[whoah][whoahtype][whoahitem][whoahfield] )
+											fmt.Printf("{%v}", data[whoah][whoahtype][whoahitem][whoahfield] )
 
-									}
-								
 								}
-												fmt.Printf("\n\\end{routeParameter}")
+							
+							}
+											fmt.Printf("\n\\end{routeParameter}")
 					
 
 						case 2:
