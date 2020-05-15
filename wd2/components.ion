@@ -2,80 +2,80 @@
 
 {
 
-//  { {"POST", "/bzz:/", 																		" Path description"} }
-//  { {"PUT", "/bzz:/", 																		" Path description"} }
-//  { {"POST", "/tag", 																			" Path description"} }
-//  { {"GET", "/tag", 																			" Path description"} }
-//  { {"GET", "/tag/\\{id\\}", 																	" Path description"} }
-//  { {"GET", "/stamp", 																		" Path description"} }
-//  { {"GET", "/pin", 																			" Path description"} }
-//  { {"GET", "/chunk/\\{reference\\}", 														" Path description"} }
-//  { {"POST", "/chunk/(?span=\\{span\\})", 													" Path description"} }
-//  { {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})", 										" Path description"} }
-//  { {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}\\&encrypt=\\{encrypt\\}", 			" Path description"} }
-//  { {"POST", "/file/",				 														" Path description"} }
-//  { {"GET", "/file/\\{reference\\}", 															" Path description"} }
-//  { {"PUT", "/file/ fromdataasbody", 															" Path description"} }
-//  { {"GET", "/manifest/\\{node:reference\\}/\\{path\\}", 										" Path description"} }
-//  { {"DELETE", "/manifest/\\{node\\}/\\{path\\} ", 											" Path description"} }
-//  { {"PUT", "/manifest/\\{old\\} ", 															" Path description"} }
-//  { {"POST", "/access/\\{address\\} ", 														" Path description"} }
-//  { {"GET", "/access/\\{address\\} ", 														" Path description"} }
-//  { {"PUT", "/access/\\{root\\}/ ", 															" Path description"} }
-//  { {"DELETE", "/access/\\{root\\} ", 														" Path description"} }
-//  { {"POST", "/pss/\\{topic\\} ", 															" Path description"} }
-//  }
-//  
-//  {
-//  
-//  { , { {"file/collection", "as request body"} },  }, 
-//  { , { {"file/collection", "as request body"} },  }, 
-//  { , { {"other", "other parameter"} },   }, 
-//  { , { {"other", "other parameter"} },   }, 
-//  { , { {"id", "string"} },   }, 
-//  { , { {"other", "other parameter"} },   }, 
-//  { , { {"other", "other parameter"} },   }, 
-//  { , { {"reference", "string"} },   }, 
-//  { , { {"span", "string"} },   }, 
-//  { , { {"owner", "string"}, {"id", "string"}, {"key", "string"} },   }, 
-//  { , { {"owner", "string"}, {"id", "string"}, {"span", "string"}, {"encrypt", "hex string"} },   }, 
-//  { , { {"other", "other parameter"} },   }, 
-//  { , { {"reference", "string"} },   }, 
-//  { , { {"file/collection", "as request body"} },   }, 
-//  { , { {"node reference", "hex string"}, {"path", "string"} },   }, 
-//  { , { {"node", "string"}, {"path", "string"} },   }, 
-//  { , { {"old", "string"} },   }, 
-//  { , { {"address", "string"} },   }, 
-//  { , { {"address", "string"} },   }, 
-//  { , { {"root", "string"} },   }, 
-//  { , { {"root", "string"} },   }, 
-//  { , { {"topic", "string"} },   }, 
-//  
-//  }
-//  
-//  
-//  { {"200", "ok", 									"" } }
-//  { { "204", "No Content", 							"" } }
-//  { { "400", "Bad request", 						"" } }
-//  { { "401", "Unauthorized", 						"" } }
-//  { { "403", "Forbidden", 							"" } }
-//  { { "404", "Not Found", 							"" } }
-//  { { "405", "Method Not Allowed", 					"" } }
-//  { { "408", "Request Timeout", 					"" } }
-//  { { "406", "406 Not Acceptable", 					"" } }
-//  { { "409", "Conflict", 							"" } }
-//  { { "410", "Gone", 								"" } }
-//  { { "411", "Length Required", 					"" } }
-//  { { "412", "Precondition Failed", 				"" } }
-//  { { "413", "Payload Too Large", 					"" } }
-//  { { "414", "URI Too Long", 						"" } }
-//  { { "415", "Unsupported Media Type", 				"" } }
-//  { { "429", "Too Many Requests", 					"" } }
-//  { { "500", "Internal Server Error", 				"" } }
-//  { { "501", "Not Implemented", 					"" } }
-//  { { "503", "Service Unavailable", 				"" } }
-//  { { "504", "Gateway Timeout", 					"" } }
-//  { { "505", "Nothing exists", 						"" } }
+{ {"POST", "/bzz:/", 																		" Path description"} }
+{ {"PUT", "/bzz:/", 																		" Path description"} }
+{ {"POST", "/tag", 																			" Path description"} }
+{ {"GET", "/tag", 																			" Path description"} }
+{ {"GET", "/tag/\\{id\\}", 																	" Path description"} }
+{ {"GET", "/stamp", 																		" Path description"} }
+{ {"GET", "/pin", 																			" Path description"} }
+{ {"GET", "/chunk/\\{reference\\}", 														" Path description"} }
+{ {"POST", "/chunk/(?span=\\{span\\})", 													" Path description"} }
+{ {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})", 										" Path description"} }
+{ {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}\\&encrypt=\\{encrypt\\}", 			" Path description"} }
+{ {"POST", "/file/",				 														" Path description"} }
+{ {"GET", "/file/\\{reference\\}", 															" Path description"} }
+{ {"PUT", "/file/ fromdataasbody", 															" Path description"} }
+{ {"GET", "/manifest/\\{node:reference\\}/\\{path\\}", 										" Path description"} }
+{ {"DELETE", "/manifest/\\{node\\}/\\{path\\} ", 											" Path description"} }
+{ {"PUT", "/manifest/\\{old\\} ", 															" Path description"} }
+{ {"POST", "/access/\\{address\\} ", 														" Path description"} }
+{ {"GET", "/access/\\{address\\} ", 														" Path description"} }
+{ {"PUT", "/access/\\{root\\}/ ", 															" Path description"} }
+{ {"DELETE", "/access/\\{root\\} ", 														" Path description"} }
+{ {"POST", "/pss/\\{topic\\} ", 															" Path description"} }
+}
+
+{
+
+{ , { {"file/collection", "as request body"} },  																	}, 
+{ , { {"file/collection", "as request body"} },  																	}, 
+{ , { {"other", "other parameter"} },   																			}, 
+{ , { {"other", "other parameter"} },   																			}, 
+{ , { {"id", "string"} },   																						}, 
+{ , { {"other", "other parameter"} },   																			}, 
+{ , { {"other", "other parameter"} },   																			}, 
+{ , { {"reference", "string"} },   																					}, 
+{ , { {"span", "string"} },   																						}, 
+{ , { {"owner", "string"}, {"id", "string"}, {"key", "string"} },   												}, 
+{ , { {"owner", "string"}, {"id", "string"}, {"span", "string"}, {"encrypt", "hex string"} },   					}, 
+{ , { {"other", "other parameter"} },   																			}, 
+{ , { {"reference", "string"} },   																					}, 
+{ , { {"file/collection", "as request body"} },   																	}, 
+{ , { {"node reference", "hex string"}, {"path", "string"} },   													}, 
+{ , { {"node", "string"}, {"path", "string"} },   																	}, 
+{ , { {"old", "string"} },   																						}, 
+{ , { {"address", "string"} },   																					}, 
+{ , { {"address", "string"} },   																					}, 
+{ , { {"root", "string"} },   																						}, 
+{ , { {"root", "string"} },   																						}, 
+{ , { {"topic", "string"} },   																						}, 
+
+}
+
+
+{ {"200", "ok", 									"" } }
+{ { "204", "No Content", 							"" } }
+{ { "400", "Bad request", 						"" } }
+{ { "401", "Unauthorized", 						"" } }
+{ { "403", "Forbidden", 							"" } }
+{ { "404", "Not Found", 							"" } }
+{ { "405", "Method Not Allowed", 					"" } }
+{ { "408", "Request Timeout", 					"" } }
+{ { "406", "406 Not Acceptable", 					"" } }
+{ { "409", "Conflict", 							"" } }
+{ { "410", "Gone", 								"" } }
+{ { "411", "Length Required", 					"" } }
+{ { "412", "Precondition Failed", 				"" } }
+{ { "413", "Payload Too Large", 					"" } }
+{ { "414", "URI Too Long", 						"" } }
+{ { "415", "Unsupported Media Type", 				"" } }
+{ { "429", "Too Many Requests", 					"" } }
+{ { "500", "Internal Server Error", 				"" } }
+{ { "501", "Not Implemented", 					"" } }
+{ { "503", "Service Unavailable", 				"" } }
+{ { "504", "Gateway Timeout", 					"" } }
+{ { "505", "Nothing exists", 						"" } }
 
 
 "400", "Bad request"

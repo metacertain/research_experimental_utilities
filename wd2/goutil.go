@@ -54,6 +54,12 @@ func main() {
 //		[1][ params ][0], [1][ params ][1]										//	routeparameter{}{} <- i * 2
 //					name			lore										//
 //																				//
+//		[1][ params ][0], [1][ params ][1]										//	headerparameter{}{} <- j * 2
+//					name			lore										//
+//																				//
+//		[1][ params ][0], [1][ params ][1]										//	queryparameter{}{} <- k * 2
+//					name			lore										//
+//																				//
 //																				//	routeresponse { < n * 3
 //		[2][ responses ][0], [2][ responses ][1], [2][ responses ][2]			//		routeResponseItem { status code } { status text } { RouteresponseItemBody}
 //					status code			status text			responseitembody	//	
@@ -109,29 +115,29 @@ func main() {
 	}
 
 	Lol := [][][][]string{
-{ { {"POST", "/bzz:/", 																			" Path description"} } , { {"file/collection", "as request body"} }, { { "204", "No Content", 							"" } } }, 
-{ { {"PUT", "/bzz:/", 																			" Path description"} } , { {"file/collection", "as request body"} }, { { "204", "No Content", 							"" } } }, 
-{ { {"POST", "/tag", 																			" Path description"} } , { {"other", "other parameter"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"GET", "/tag", 																			" Path description"} } , { {"other", "other parameter"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"GET", "/tag/\\{id\\}", 																	" Path description"} } , { {"id", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"GET", "/stamp", 																			" Path description"} } , { {"other", "other parameter"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"GET", "/pin", 																			" Path description"} } , { {"other", "other parameter"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"GET", "/chunk/\\{reference\\}", 															" Path description"} } , { {"reference", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"POST", "/chunk/(?span=\\{span\\})", 														" Path description"} } , { {"span", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})", 										" Path description"} } , { {"owner", "string"}, {"id", "string"}, {"key", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}\\&encrypt=\\{encrypt\\}", 				" Path description"} } , { {"owner", "string"}, {"id", "string"}, {"span", "string"}, {"encrypt", "hex string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"POST", "/file/",				 															" Path description"} } , { {"other", "other parameter"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"GET", "/file/\\{reference\\}", 															" Path description"} } , { {"reference", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"PUT", "/file/ fromdataasbody", 															" Path description"} } , { {"file/collection", "as request body"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"GET", "/manifest/\\{node:reference\\}/\\{path\\}", 										" Path description"} } , { {"node reference", "hex string"}, {"path", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"DELETE", "/manifest/\\{node\\}/\\{path\\} ", 												" Path description"} } , { {"node", "string"}, {"path", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"PUT", "/manifest/\\{old\\} ", 															" Path description"} } , { {"old", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"POST", "/access/\\{address\\} ", 															" Path description"} } , { {"address", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"GET", "/access/\\{address\\} ", 															" Path description"} } , { {"address", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"PUT", "/access/\\{root\\}/ ", 															" Path description"} } , { {"root", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"DELETE", "/access/\\{root\\} ", 															" Path description"} } , { {"root", "string"} },  { { "204", "No Content", 							"" } } }, 
-{ { {"POST", "/pss/\\{topic\\} ", 																" Path description"} } , { {"topic", "string"} },  { { "204", "No Content", 							"" } } }, 
-}
+{ { {"PUT", "/bzz:/", 																			" Path description"} } , { {"file/collection", "as request body"} 															}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"POST", "/bzz:/", 																			" Path description"} } , { {"file/collection", "as request body"} 															}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"POST", "/tag", 																			" Path description"} } , { {"other", "other parameter"} 																	}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"GET", "/tag", 																			" Path description"} } , { {"other", "other parameter"} 																	}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"GET", "/tag/\\{id\\}", 																	" Path description"} } , { {"id", "string"} 																				}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"GET", "/stamp", 																			" Path description"} } , { {"other", "other parameter"} 																	}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"GET", "/pin", 																			" Path description"} } , { {"other", "other parameter"} 																	}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"GET", "/chunk/\\{reference\\}", 															" Path description"} } , { {"reference", "string"} 																			}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"POST", "/chunk/(?span=\\{span\\})", 														" Path description"} } , { 																									}	,		{  } ,	 	{ {"span", "string"} 										} , 		{ { "204", "No Content", "" } } }, 
+{ { {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})", 										" Path description"} } , { {"owner", "string"}, {"id", "string"} 															}	,		{  } ,	 	{ {"key", "string"} 										} , 		{ { "204", "No Content", "" } } }, 
+{ { {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}\\&encrypt=\\{encrypt\\}", 				" Path description"} } , { {"owner", "string"}, {"id", "string"} 															}	,		{  } ,	 	{ {"span", "string"}, {"encrypt", "hex string"} 			} , 		{ { "204", "No Content", "" } } }, 
+{ { {"POST", "/file/",				 															" Path description"} } , { {"other", "other parameter"} 																	}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"GET", "/file/\\{reference\\}", 															" Path description"} } , { {"reference", "string"} 																			}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"PUT", "/file/ fromdataasbody", 															" Path description"} } , { {"file/collection", "as request body"} 															}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"GET", "/manifest/\\{node:reference\\}/\\{path\\}", 										" Path description"} } , { {"node reference", "hex string"}, {"path", "string"} 											}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"DELETE", "/manifest/\\{node\\}/\\{path\\} ", 												" Path description"} } , { {"node", "string"}, {"path", "string"} 															}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"PUT", "/manifest/\\{old\\} ", 															" Path description"} } , { {"old", "string"} 																				}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"POST", "/access/\\{address\\} ", 															" Path description"} } , { {"address", "string"} 																			}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"GET", "/access/\\{address\\} ", 															" Path description"} } , { {"address", "string"} 																			}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"PUT", "/access/\\{root\\}/ ", 															" Path description"} } , { {"root", "string"} 																				}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"DELETE", "/access/\\{root\\} ", 															" Path description"} } , { {"root", "string"} 																				}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+{ { {"POST", "/pss/\\{topic\\} ", 																" Path description"} } , { {"topic", "string"} 																				}	,		{  } ,	 	{ 															} , 		{ { "204", "No Content", "" } } }, 
+	} 	
 
 
 	
@@ -152,51 +158,87 @@ func printStruct(data [][][][]string) {
 		fmt.Printf("\n")
 
 		for whoahtype := range data[whoah] {
+				if ( len(data[whoah][whoahtype]) > 0 ) {
+					switch whoahtype {
+						case 0:
+											fmt.Printf("\n\n\\begin{apiRoute}{" + 
+											data[whoah][0][0][0] + "}{" + 
+											data[whoah][0][0][1] + "}{" + 
+											data[whoah][0][0][2] + "}\n{\n}\n{ }\n")
 
-				switch whoahtype {
-					case 0:
-										fmt.Printf("\n\n\\begin{apiRoute}{" + 
-										data[whoah][0][0][0] + "}{" + 
-										data[whoah][0][0][1] + "}{" + 
-										data[whoah][0][0][2] + "}\n{\n}\n{ }\n")
+						case 1:
+												fmt.Printf("\n\\begin{routeParameter} ")
+								
+								for whoahitem, _ := range data[whoah][whoahtype] {
 
-					case 1:
-										fmt.Printf("\n\\begin{routeParameter} ")
-						
-						for whoahitem, _ := range data[whoah][whoahtype] {
+												fmt.Printf("\n\\routeParamItem")
 
-										fmt.Printf("\n\\routeParamItem")
+									for whoahfield := range data[whoah][whoahtype][whoahitem] {
 
-							for whoahfield := range data[whoah][whoahtype][whoahitem] {
+												fmt.Printf("{%v}", data[whoah][whoahtype][whoahitem][whoahfield] )
 
-										fmt.Printf("{%v}", data[whoah][whoahtype][whoahitem][whoahfield] )
+									}
+								
+								}
+												fmt.Printf("\n\\end{routeParameter}")
+					
 
+						case 2:
+
+											fmt.Printf("\n\\begin{headerParameter} ")
+							
+							for whoahitem, _ := range data[whoah][whoahtype] {
+
+											fmt.Printf("\n\\headerParamItem")
+
+								for whoahfield := range data[whoah][whoahtype][whoahitem] {
+
+											fmt.Printf("{%v}", data[whoah][whoahtype][whoahitem][whoahfield] )
+
+								}
+							
 							}
-						
+											fmt.Printf("\n\\end{headerParameter}")
+
+						case 3:
+
+											fmt.Printf("\n\\begin{queryParameter} ")
+							
+							for whoahitem, _ := range data[whoah][whoahtype] {
+
+											fmt.Printf("\n\\queryParamItem")
+
+								for whoahfield := range data[whoah][whoahtype][whoahitem] {
+
+											fmt.Printf("{%v}", data[whoah][whoahtype][whoahitem][whoahfield] )
+
+								}
+							
+							}
+											fmt.Printf("\n\\end{queryParameter}")
+
+						case 4: 
+											fmt.Printf("\n\\begin{routeResponse}{application/json}")
+							for whoahitem, _ := range data[whoah][whoahtype] {
+
+											fmt.Printf("\n\\begin{routeResponseItem}")
+
+								for whoahfield := range data[whoah][whoahtype][whoahitem] {
+									if whoahfield < 2 {
+											fmt.Printf("{%v}", data[whoah][whoahtype][whoahitem][whoahfield] )
+									}
+									if whoahfield == 2 {
+											fmt.Printf("\n\\begin{routeResponseItemBody}\n %v \n\\end{routeResponseItemBody}", data[whoah][whoahtype][whoahitem][whoahfield] )	
+									}
+
+								}
+											fmt.Printf("\n\\end{routeResponseItem}")
 						}
-										fmt.Printf("\n\\end{routeParameter}")
-				
-					case 2: 
-										fmt.Printf("\n\\begin{routeResponse}{application/json}")
-						for whoahitem, _ := range data[whoah][whoahtype] {
+											fmt.Printf("\n\\end{routeResponse}")
+					
 
-										fmt.Printf("\n\\begin{routeResponseItem}")
-
-							for whoahfield := range data[whoah][whoahtype][whoahitem] {
-								if whoahfield < 2 {
-										fmt.Printf("{%v}", data[whoah][whoahtype][whoahitem][whoahfield] )
-								}
-								if whoahfield == 2 {
-										fmt.Printf("\n\\begin{routeResponseItemBody}\n %v \n\\end{routeResponseItemBody}", data[whoah][whoahtype][whoahitem][whoahfield] )	
-								}
-
-							}
-										fmt.Printf("\n\\end{routeResponseItem}")
-					}
-										fmt.Printf("\n\\end{routeResponse}")
-				
-
-				}	
+					}	
+				}
 		
 		}
 				fmt.Printf("\n\\end{apiRoute}\n\\\\\n\\\\\n")
