@@ -8,38 +8,38 @@
 
 {
 
-{ {"PUT", "/bzz:/", 																			"Append to upload, returns new manifest"} 													}
-{ {"POST", "/bzz:/", 																			"Upload file or collection, returns tag used for tracking global sync state"} 				}
-{ {"POST", "/tags", 																			"Create new tag"} 																			}
-{ {"GET", "/tags", 																				"Get all tags"} 																			}
-{ {"GET", "/tags/\\{id\\}", 																	"Path description"} 																		}
-{ {"DELETE", "/tags/\\{id\\}",																	"Path description"} 																		}
-{ {"GET", "/stamp", 																			"View all postage stamps"} 																	}
-{ {"GET", "/stamp/{id}",																		"View postage stamp with id"} 																}
-{ {"PUT", "/stamp/{id}", 																		"Top up postage stamp with id"} 															}
-{ {"DELETE", "/stamp/{id}", 																	"Drain and expire stamp with id"} 															}
-{ {"POST", "/stamp/{id}", 																		"Create a new postage stamp"} 																}
-{ {"GET", "/pin/{id}?offset=\\{offset}&length=\\{length}", 										"View Pinned Content and metadata"} 														}
-{ {"POST", "/pin/{id}", 																		"Pin an already uploaded content"} 															}
-{ {"PUT", "/pin/{id}", 																			"Path description?"} 																		}
-{ {"DELETE", "/pin/{id}", 																		"Remove pinning from content"} 																}
-{ {"GET", "/chunk/\\{reference\\}", 															"Retrieve chunk as in \\ref\\{def:retrieve\\}"} 											}
-{ {"POST", "/chunk/(?span=\\{span\\})", 														"Create chunk as in \\ref\\{def:store\\}"} 													}
-{ {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})", 											"Retrieve single owner chunk as in \\ref\\{def:soc-retrieve\\} "} 							}
-{ {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}\\&encrypt=\\{encrypt\\}", 				"Create new single owner chunk as in \\ref\\{def:soc-store\\} "} 							}
-{ {"POST", "/file/",				 															"Path description as in \\ref\\{def:swarm-hash\\}"} 										}
-{ {"GET", "/file/\\{reference\\}", 																"Retrieve file by reference as in \\ref\\{def:file-retrieval\\}"} 							}
-{ {"PUT", "/file/ ", 																			"Update file, returns new reference"} 														}
-{ {"GET", "/manifest/\\{node:reference\\}/\\{path\\}", 											"Lookup manifest by path as in \\ref\\{def:manifests-lookup\\}"} 							}
-{ {"DELETE", "/manifest/\\{node\\}/\\{path\\} ", 												"Delete manifest by path as in \\ref\\{def:manifests-remove\\}"} 							}
-{ {"PUT", "/manifest/\\{old\\} ", 																"Update manifest as in \\ref\\{def:manifest-update\\}"} 									}
-{ {"POST", "/manifest/\\{old\\}/\\{new\\}", 													"Merge manifests as in \\ref\\{def:manifest-merge\\}"} 										}
-{ {"POST", "/access/\\{address\\} ", 															"Create ACT "} 																		}
-{ {"GET", "/access/\\{address\\} ", 															"Path description"} 																		}
-{ {"PUT", "/access/\\{root\\}/ ", 																"Path description"} 																		}
-{ {"DELETE", "/access/\\{root\\} ", 															"Path description"} 																		}
-{ {"POST", "/pss/\\{recipient\\}/\\{topic\\}(?targets=\\{targets\\})", 							"Path description"} 																		}
-{ {"GET", "/pss/\\{topic\\}/\\{channel\\}",														"Recieve on channel as in \\ref\\{def:recieve\\}" 											}
+{ {"PUT", "/bzz:/",                                                                             "Append to upload, returns new manifest"}                                                   }
+{ {"POST", "/bzz:/",                                                                            "Upload file or collection, returns tag used for tracking global sync state"}               }
+{ {"POST", "/tags",                                                                             "Create new tag"}                                                                           }
+{ {"GET", "/tags",                                                                              "Get all tags"}                                                                             }
+{ {"GET", "/tags/\\{id\\}",                                                                     "Path description"}                                                                         }
+{ {"DELETE", "/tags/\\{id\\}",                                                                  "Path description"}                                                                         }
+{ {"GET", "/stamp",                                                                             "View all postage stamps"}                                                                  }
+{ {"GET", "/stamp/{id}",                                                                        "View postage stamp with id"}                                                               }
+{ {"PUT", "/stamp/{id}",                                                                        "Top up postage stamp with id"}                                                             }
+{ {"DELETE", "/stamp/{id}",                                                                     "Drain and expire stamp with id"}                                                           }
+{ {"POST", "/stamp/{id}",                                                                       "Create a new postage stamp"}                                                               }
+{ {"GET", "/pin/{id}?offset=\\{offset}&length=\\{length}",                                      "View Pinned Content and metadata"}                                                         }
+{ {"POST", "/pin/{id}",                                                                         "Pin an already uploaded content"}                                                          }
+{ {"PUT", "/pin/{id}",                                                                          "Path description?"}                                                                        }
+{ {"DELETE", "/pin/{id}",                                                                       "Remove pinning from content"}                                                              }
+{ {"GET", "/chunk/\\{reference\\}",                                                             "Retrieve chunk as in \\ref\\{def:retrieve\\}"}                                             }
+{ {"POST", "/chunk/(?span=\\{span\\})",                                                         "Create chunk as in \\ref\\{def:store\\}"}                                                  }
+{ {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})",                                          "Retrieve single owner chunk as in \\ref\\{def:soc-retrieve\\} "}                           }
+{ {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}\\&encrypt=\\{encrypt\\}",                 "Create new single owner chunk as in \\ref\\{def:soc-store\\} "}                            }
+{ {"POST", "/file/",                                                                            "Path description as in \\ref\\{def:swarm-hash\\}"}                                         }
+{ {"GET", "/file/\\{reference\\}",                                                              "Retrieve file by reference as in \\ref\\{def:file-retrieval\\}"}                           }
+{ {"PUT", "/file/ ",                                                                            "Update file, returns new reference"}                                                       }
+{ {"GET", "/manifest/\\{node:reference\\}/\\{path\\}",                                          "Lookup manifest by path as in \\ref\\{def:manifests-lookup\\}"}                            }
+{ {"DELETE", "/manifest/\\{node\\}/\\{path\\} ",                                                "Delete manifest by path as in \\ref\\{def:manifests-remove\\}"}                            }
+{ {"PUT", "/manifest/\\{old\\} ",                                                               "Update manifest as in \\ref\\{def:manifest-update\\}"}                                     }
+{ {"POST", "/manifest/\\{old\\}/\\{new\\}",                                                     "Merge manifests as in \\ref\\{def:manifest-merge\\}"}                                      }
+{ {"POST", "/access/\\{address\\} ",                                                            "Create ACT "}                                                                      }
+{ {"GET", "/access/\\{address\\} ",                                                             "Path description"}                                                                         }
+{ {"PUT", "/access/\\{root\\}/ ",                                                               "Path description"}                                                                         }
+{ {"DELETE", "/access/\\{root\\} ",                                                             "Path description"}                                                                         }
+{ {"POST", "/pss/\\{recipient\\}/\\{topic\\}(?targets=\\{targets\\})",                          "Path description"}                                                                         }
+{ {"GET", "/pss/\\{topic\\}/\\{channel\\}",                                                     "Recieve on channel as in \\ref\\{def:recieve\\}"                                           }
 
 
 }
@@ -48,36 +48,36 @@
 
 {
 
-{ {"file/collection", "as request body"} 																													}	
-{ {"file/collection", "as request body"} 																													}	
-{ 							 																																}	
-{ 							 																																}	
-{ {"id", "string"} 																																			}	
-{ {"id", "string"}, {"offset", "integer"}, {"length", "integer"}	 																						}	
-{ 							 																																}	
-{ {"id", ""} 																																				}	
-{ {"id", ""} 																																				}	
-{ {"id", ""} 																																				}	
-{ {"id", ""} 																																				}	
-{ 							 																																}	
-{ 							 																																}	
-{ 							 																																}	
-{ 							 																																}	
-{ {"reference", "string"} 																																	}	
-{ 																																							}	
-{ {"owner", "eth address of single owner"}, {"id", "identifier within owner namespace"} 																	}	
-{ {"owner", "eth address of single owner"}, {"id", "identifier within owner namespace"} 																	}	
-{ 							 																																}	
-{ {"reference", "string"} 																																	}	
-{ {"file/collection", "as request body"} 																													}	
-{ {"node reference", "hex string"}, {"path", "string"} 																										}	
-{ {"node", "string"}, {"path", "string"} 																													}	
-{ {"old", "string"} 																																		}	
-{ {"address", "string"} 																																	}	
-{ {"address", "string"} 																																	}	
-{ {"root", "string"} 																																		}	
-{ {"root", "string"} 																																		}	
-{ {"topic", "string"} 																																		}	
+{ {"file/collection", "as request body"}                                                                                                                    }   
+{ {"file/collection", "as request body"}                                                                                                                    }   
+{                                                                                                                                                           }   
+{                                                                                                                                                           }   
+{ {"id", "string"}                                                                                                                                          }   
+{ {"id", "string"}, {"offset", "integer"}, {"length", "integer"}                                                                                            }   
+{                                                                                                                                                           }   
+{ {"id", ""}                                                                                                                                                }   
+{ {"id", ""}                                                                                                                                                }   
+{ {"id", ""}                                                                                                                                                }   
+{ {"id", ""}                                                                                                                                                }   
+{                                                                                                                                                           }   
+{                                                                                                                                                           }   
+{                                                                                                                                                           }   
+{                                                                                                                                                           }   
+{ {"reference", "string"}                                                                                                                                   }   
+{                                                                                                                                                           }   
+{ {"owner", "eth address of single owner"}, {"id", "identifier within owner namespace"}                                                                     }   
+{ {"owner", "eth address of single owner"}, {"id", "identifier within owner namespace"}                                                                     }   
+{                                                                                                                                                           }   
+{ {"reference", "string"}                                                                                                                                   }   
+{ {"file/collection", "as request body"}                                                                                                                    }   
+{ {"node reference", "hex string"}, {"path", "string"}                                                                                                      }   
+{ {"node", "string"}, {"path", "string"}                                                                                                                    }   
+{ {"old", "string"}                                                                                                                                         }   
+{ {"address", "string"}                                                                                                                                     }   
+{ {"address", "string"}                                                                                                                                     }   
+{ {"root", "string"}                                                                                                                                        }   
+{ {"root", "string"}                                                                                                                                        }   
+{ {"topic", "string"}                                                                                                                                       }   
 
 }
 
@@ -88,36 +88,36 @@
 
 {
 
-{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 
-{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{ {"SWARM-ENCRYPTION", "hex string"}																														} 
-{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 
-{  																																							} 
-{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 
-{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 
-{  																																							} 
-{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
-{  																																							} 
+{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     } 
+{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{ {"SWARM-ENCRYPTION", "hex string"}                                                                                                                        } 
+{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     } 
+{                                                                                                                                                           } 
+{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     } 
+{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     } 
+{                                                                                                                                                           } 
+{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
+{                                                                                                                                                           } 
 
 }
 
@@ -128,38 +128,38 @@
 
 {
 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ {"offset", "integer"}, {"length", "integer"}				} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ {"span", "string"} 										} 
-{ {"key", "string"} 										} 
-{ {"span", "string"}, {"encrypt", "hex string"} 			} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
-{ 															} 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{ {"offset", "integer"}, {"length", "integer"}              } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{ {"span", "string"}                                        } 
+{ {"key", "string"}                                         } 
+{ {"span", "string"}, {"encrypt", "hex string"}             } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
+{                                                           } 
 
 }
 
@@ -208,114 +208,65 @@
 
 // path routeparam|headerparam|queryparam|responsebody
 
-
 {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-{ { {"PUT", "/bzz:/",	 																"Append to upload, returns new manifest"} 											},	{ {"file/collection", "as request body"} 															},	{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"POST", "/bzz:/", 																	"Upload file or collection, returns tag used for tracking global sync state"} 		},	{ {"file/collection", "as request body"} 															},	{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"POST", "/tags", 																	"Create new tag"} 																	},	{ 							 																		},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/tags", 																	"Get all tags"} 																	},	{ 							 																		},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/tags/\\{id\\}", 															"Path description"} 																},	{ {"id", "string"} 																					},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"DELETE", "/tags/\\{id\\}",														"Path description"} 																},	{ {"id", "string"}													 								},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/stamp", 																	"View all postage stamps"} 															},	{ 							 																		},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/stamp/{id}",																"View postage stamp with id"} 														},	{ {"id", ""} 																						},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"PUT", "/stamp/{id}", 																"Top up postage stamp with id"} 													},	{ {"id", ""} 																						},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"DELETE", "/stamp/{id}", 															"Drain and expire stamp with id"} 													},	{ {"id", ""} 																						},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"POST", "/stamp/{id}", 															"Create a new postage stamp"} 														},	{ {"id", ""} 																						},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/pin/{id}?offset=\\{offset}&length=\\{length}", 							"View Pinned Content and metadata"} 												},	{ 							 																		},	{  																																							} 	,	{ {"offset", "integer"}, {"length", "integer"}				}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"POST", "/pin/{id}", 																"Pin an already uploaded content"} 													},	{ {"id", ""} 																						},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"PUT", "/pin/{id}", 																"Path description?"} 																},	{ {"id", ""} 																						},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"DELETE", "/pin/{id}", 															"Remove pinning from content"} 														},	{ {"id", ""} 																						},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/chunk/\\{reference\\}", 													"Retrieve chunk as in \\ref\\{def:retrieve\\}"} 									},	{ {"reference", "string"} 																			},	{ {"SWARM-ENCRYPTION", "hex string"}																														} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"POST", "/chunk/(?span=\\{span\\})", 												"Create chunk as in \\ref\\{def:store\\}"} 											},	{ 							 																		},	{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 	,	{ {"span", "string"} 										}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})", 								"Retrieve single owner chunk as in \\ref\\{def:soc-retrieve\\} "} 					},	{ {"owner", "eth address of single owner"}, {"id", "identifier within owner namespace"} 			},	{  																																							} 	,	{ {"key", "string"} 										}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}\\&encrypt=\\{encrypt\\}", 		"Create new single owner chunk as in \\ref\\{def:soc-store\\} "} 					},	{ {"owner", "eth address of single owner"}, {"id", "identifier within owner namespace"} 			},	{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 	,	{ {"span", "string"}, {"encrypt", "hex string"} 			}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"POST", "/file/",				 													"Path description as in \\ref\\{def:swarm-hash\\}"} 								},	{ 							 																		},	{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/file/\\{reference\\}", 													"Retrieve file by reference as in \\ref\\{def:file-retrieval\\}"} 					},	{ {"reference", "string"} 																			},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"PUT", "/file/ ", 																	"Update file, returns new reference"} 												},	{ {"file/collection", "as request body"} 															},	{ {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}  	} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/manifest/\\{node:reference\\}/\\{path\\}", 								"Lookup manifest by path as in \\ref\\{def:manifests-lookup\\}"} 					},	{ {"node reference", "hex string"}, {"path", "string"} 												},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"DELETE", "/manifest/\\{node\\}/\\{path\\} ", 										"Delete manifest by path as in \\ref\\{def:manifests-remove\\}"} 					},	{ {"node", "string"}, {"path", "string"} 															},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"PUT", "/manifest/\\{old\\} ", 													"Update manifest as in \\ref\\{def:manifest-update\\}"} 							},	{ {"old", "string"} 																				},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"POST", "/manifest/\\{old\\}/\\{new\\}", 											"Merge manifests as in \\ref\\{def:manifest-merge\\}"} 								},	{ {"old", "string"}, {"new", "string"} 																},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"POST", "/access/\\{address\\} ", 													"Lock ACT for address as in \\ref\\{def:ac-api\\}"} 								},	{ {"address", "string"} 																			},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/access/\\{address\\} ", 													"Unlock ACT for address as in \\ref\\{def:ac-api\\}"} 								},	{ {"address", "string"}																				},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"PUT", "/access/\\{root\\}/ ", 													"Add ACT for root hash as in \\ref\\{def:act-api\\}"} 								},	{ {"root", "string"} 																				},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"DELETE", "/access/\\{root\\} ", 													"Remove ACT for root hash as in \\ref\\{def:act-api\\}"} 							},	{ {"root", "string"}  																				},	{  																																							} 	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"POST", "/pss/\\{recipient\\}/\\{topic\\}(?targets=\\{targets\\})", 				"Send private message to recipient(s) as in \\ref\\{def:send\\}"}					},	{ {"recipient", "string"}, {"topic", "string"}														},	{																																							}	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
-{ { {"GET", "/pss/\\{topic\\}/\\{channel\\}",											"Recieve on channel as in \\ref\\{def:recieve\\}" 									},	{ {"topic", "string"}, {"channel". "string"} 														},	{																																							}	,	{ 															}  , 	{ { "200", "Ok", "" } } }, 
+{ { {"PUT", "/bzz:/",                                                                   "Append to upload, returns new manifest"}                                           },  { {"file/collection", "as request body"}                                                            },  { {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"POST", "/bzz:/",                                                                  "Upload file or collection, returns tag used for tracking global sync state"}       },  { {"file/collection", "as request body"}                                                            },  { {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"POST", "/tags",                                                                   "Create new tag"}                                                                   },  {                                                                                                   },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/tags",                                                                    "Get all tags"}                                                                     },  {                                                                                                   },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/tags/\\{id\\}",                                                           "Path description"}                                                                 },  { {"id", "string"}                                                                                  },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"DELETE", "/tags/\\{id\\}",                                                        "Path description"}                                                                 },  { {"id", "string"}                                                                                  },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/stamp",                                                                   "View all postage stamps"}                                                          },  {                                                                                                   },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/stamp/{id}",                                                              "View postage stamp with id"}                                                       },  { {"id", ""}                                                                                        },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"PUT", "/stamp/{id}",                                                              "Top up postage stamp with id"}                                                     },  { {"id", ""}                                                                                        },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"DELETE", "/stamp/{id}",                                                           "Drain and expire stamp with id"}                                                   },  { {"id", ""}                                                                                        },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"POST", "/stamp/{id}",                                                             "Create a new postage stamp"}                                                       },  { {"id", ""}                                                                                        },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/pin/{id}?offset=\\{offset}&length=\\{length\\}",                          "View Pinned Content and metadata"}                                                 },  {                                                                                                   },  {                                                                                                                                                           }   ,   { {"offset", "integer"}, {"length", "integer"}              }  ,    { { "200", "Ok", "" } } }, 
+{ { {"POST", "/pin/{id}",                                                               "Pin an already uploaded content"}                                                  },  { {"id", ""}                                                                                        },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"PUT", "/pin/{id}",                                                                "Path description?"}                                                                },  { {"id", ""}                                                                                        },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"DELETE", "/pin/{id}",                                                             "Remove pinning from content"}                                                      },  { {"id", ""}                                                                                        },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/chunk/\\{reference\\}",                                                   "Retrieve chunk as in \\ref\\{def:retrieve\\}"}                                     },  { {"reference", "string"}                                                                           },  { {"SWARM-ENCRYPTION", "hex string"}                                                                                                                        }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"POST", "/chunk/(?span=\\{span\\})",                                               "Create chunk as in \\ref\\{def:store\\}"}                                          },  {                                                                                                   },  { {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     }   ,   { {"span", "string"}                                        }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/soc/\\{owner\\}/\\{id\\}(?key=\\{key\\})",                                "Retrieve single owner chunk as in \\ref\\{def:soc-retrieve\\} "}                   },  { {"owner", "eth address of single owner"}, {"id", "identifier within owner namespace"}             },  {                                                                                                                                                           }   ,   { {"key", "string"}                                         }  ,    { { "200", "Ok", "" } } }, 
+{ { {"POST", "/soc/\\{owner\\}/\\{id\\}?span=\\{span\\}\\&encrypt=\\{encrypt\\}",       "Create new single owner chunk as in \\ref\\{def:soc-store\\} "}                    },  { {"owner", "eth address of single owner"}, {"id", "identifier within owner namespace"}             },  { {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     }   ,   { {"span", "string"}, {"encrypt", "hex string"}             }  ,    { { "200", "Ok", "" } } }, 
+{ { {"POST", "/file/",                                                                  "Path description as in \\ref\\{def:swarm-hash\\}"}                                 },  {                                                                                                   },  { {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/file/\\{reference\\}",                                                    "Retrieve file by reference as in \\ref\\{def:file-retrieval\\}"}                   },  { {"reference", "string"}                                                                           },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"PUT", "/file/ ",                                                                  "Update file, returns new reference"}                                               },  { {"file/collection", "as request body"}                                                            },  { {"SWARM-TAG", "hex string" }, {"SWARM-STAMP", "hex string"}, {"SWARM-ENCRYPTION", "hex string"}, {"SWARM-PIN", "bool"}, {"SWARM-PARITIES", "integer"}     }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/manifest/\\{node:reference\\}/\\{path\\}",                                "Lookup manifest by path as in \\ref\\{def:manifests-lookup\\}"}                    },  { {"node reference", "hex string"}, {"path", "string"}                                              },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"DELETE", "/manifest/\\{node\\}/\\{path\\} ",                                      "Delete manifest by path as in \\ref\\{def:manifests-remove\\}"}                    },  { {"node", "string"}, {"path", "string"}                                                            },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"PUT", "/manifest/\\{old\\} ",                                                     "Update manifest as in \\ref\\{def:manifest-update\\}"}                             },  { {"old", "string"}                                                                                 },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"POST", "/manifest/\\{old\\}/\\{new\\}",                                           "Merge manifests as in \\ref\\{def:manifest-merge\\}"}                              },  { {"old", "string"}, {"new", "string"}                                                              },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"POST", "/access/\\{address\\} ",                                                  "Lock ACT for address as in \\ref\\{def:ac-api\\}"}                                 },  { {"address", "string"}                                                                             },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/access/\\{address\\} ",                                                   "Unlock ACT for address as in \\ref\\{def:ac-api\\}"}                               },  { {"address", "string"}                                                                             },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"PUT", "/access/\\{root\\}/ ",                                                     "Add ACT for root hash as in \\ref\\{def:act-api\\}"}                               },  { {"root", "string"}                                                                                },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"DELETE", "/access/\\{root\\} ",                                                   "Remove ACT for root hash as in \\ref\\{def:act-api\\}"}                            },  { {"root", "string"}                                                                                },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"POST", "/pss/\\{recipient\\}/\\{topic\\}(?targets=\\{targets\\})",                "Send private message to recipient(s) as in \\ref\\{def:send\\}"}                   },  { {"recipient", "string"}, {"topic", "string"}                                                      },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
+{ { {"GET", "/pss/\\{topic\\}/\\{channel\\}",                                           "Recieve on channel as in \\ref\\{def:recieve\\}"}                                  },  { {"topic", "string"}, {"channel". "string"}                                                        },  {                                                                                                                                                           }   ,   {                                                           }  ,    { { "200", "Ok", "" } } }, 
 }
+	
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{ {"200", "ok", 									"" } }
-{ { "204", "No Content", 							"" } }
-{ { "400", "Bad request", 						"" } }
-{ { "401", "Unauthorized", 						"" } }
-{ { "403", "Forbidden", 							"" } }
-{ { "404", "Not Found", 							"" } }
-{ { "405", "Method Not Allowed", 					"" } }
-{ { "408", "Request Timeout", 					"" } }
-{ { "406", "406 Not Acceptable", 					"" } }
-{ { "409", "Conflict", 							"" } }
-{ { "410", "Gone", 								"" } }
-{ { "411", "Length Required", 					"" } }
-{ { "412", "Precondition Failed", 				"" } }
-{ { "413", "Payload Too Large", 					"" } }
-{ { "414", "URI Too Long", 						"" } }
-{ { "415", "Unsupported Media Type", 				"" } }
-{ { "429", "Too Many Requests", 					"" } }
-{ { "500", "Internal Server Error", 				"" } }
-{ { "501", "Not Implemented", 					"" } }
-{ { "503", "Service Unavailable", 				"" } }
-{ { "504", "Gateway Timeout", 					"" } }
-{ { "505", "Nothing exists", 						"" } }
+{ { "200", "ok",                                     "" } }
+{ { "204", "No Content",                            "" } }
+{ { "400", "Bad request",                       "" } }
+{ { "401", "Unauthorized",                      "" } }
+{ { "403", "Forbidden",                             "" } }
+{ { "404", "Not Found",                             "" } }
+{ { "405", "Method Not Allowed",                    "" } }
+{ { "408", "Request Timeout",                   "" } }
+{ { "406", "406 Not Acceptable",                    "" } }
+{ { "409", "Conflict",                          "" } }
+{ { "410", "Gone",                              "" } }
+{ { "411", "Length Required",                   "" } }
+{ { "412", "Precondition Failed",               "" } }
+{ { "413", "Payload Too Large",                     "" } }
+{ { "414", "URI Too Long",                      "" } }
+{ { "415", "Unsupported Media Type",                "" } }
+{ { "429", "Too Many Requests",                     "" } }
+{ { "500", "Internal Server Error",                 "" } }
+{ { "501", "Not Implemented",                   "" } }
+{ { "503", "Service Unavailable",               "" } }
+{ { "504", "Gateway Timeout",                   "" } }
+{ { "505", "Nothing exists",                        "" } }
 
 
 "400", "Bad request"
